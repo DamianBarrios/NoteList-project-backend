@@ -1,13 +1,15 @@
 const { Router } = require('express');
 const router = Router();
 
-router.route('/')
-    .get((req,res) => res.send("GET - Notes Routes"))
-    .post((req,res) => res.send("POST - Notes Routes"))
+const { getNotes, getNote, updateNote, deleteNote, createNote} = require('../controllers/notes.controller')
 
-//router.route('/')
-    /* .get()
-    .put()
-    .delete()  */   
+router.route('/')
+    .get(getNotes)
+    .post(createNote)
+
+router.route('/')
+    .get(getNote)
+    .put(updateNote)
+    .delete(deleteNote)   
 
 module.exports = router;    
