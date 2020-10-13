@@ -7,7 +7,7 @@ router.route('/')
     .get(getNotes)
     .post(createNote)
 
-router.route('/')
+router.route('/:id')
     .get(getNote)
     .put(updateNote)
     .delete(deleteNote)   
