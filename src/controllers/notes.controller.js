@@ -8,7 +8,7 @@ notesCtrl.getNotes = async (req,res) => {
 };
 
 notesCtrl.createNote = async (req, res) => {
-    const {title , description, date, author} = req.body;
+    const {title , description, date, author= 'default'} = req.body;
     const newNote = new Note({
         title,
         description,
