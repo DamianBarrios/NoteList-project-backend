@@ -1,13 +1,10 @@
-require('dotenv').config();
-const app = require('./app.js');
-require('./database');
-
+require("dotenv").config();
+const app = require("./app.js");
+require("./database");
 
 async function main() {
-
-    await app.listen(app.get('port'));
-    console.log(`Server on port ${app.get('port')}`);
-
+  await app.listen(app.get("port"));
+  console.log(`Server on port ${app.get("port")}`);
 }
 
 main();
